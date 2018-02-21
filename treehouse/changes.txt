@@ -1,0 +1,5 @@
+[ 2018-02-21 - Alexander Foster-McCulloch]
+-Added navbar
+-Implemented responsive grid
+-Styled index.html
+-Styled warning.html
