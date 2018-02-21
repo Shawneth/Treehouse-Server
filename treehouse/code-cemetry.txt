@@ -1,0 +1,114 @@
+Whoops / Code Cemetry
+Nav-Bar 1
+HTML
+
+				<div id="nav-bar">
+					<label for="show-menu" class="show-menu">Show Menu</label>
+					<input type="checkbox" id="show-menu" role="button">
+					<ul id="menu">
+						<li><a href="#">Home</a></li>
+						<li>
+							<a href="#">Categories</a>
+							<ul class="hidden">
+								<li><a href="#">Category 1</a></li>
+								<li><a href="#">Category 2</a></li>
+								<li><a href="#">Category 3</a></li>
+								<li><a href="#">Category 4</a></li>
+								<li><a href="#">Category 5</a></li>
+							</ul>
+						</li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</div>
+
+
+
+CSS
+
+/* NavBar */
+#nav-bar {
+	min-width: 80%;
+}
+#nav-bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+#nav-bar li {
+	display: inline-block;
+	float: left;
+	margin-right: 1px;
+}
+#nav-bar li a {
+	display: block;
+	min-width: 140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #FFF;
+	background-color: #2F3036;
+	text-decoration: none;
+}
+#nav-bar li:hover a {
+	background-color: #fa3c91;
+}
+#nav-bar li:hover ul a {
+	background-color: #F3F3F3;
+	color: #2F3036;
+	height: 40px;
+	line-height: 40px;
+}
+#nav-bar li:hover ul a:hover {
+	background-color: #19C589;
+	color: #FFF;
+}
+#nav-bar li ul {
+	display: none;
+}
+#nav-bar li ul li {
+	display: block;
+	float: none;
+}
+#nav-bar li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+#nav-bar ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+.show-menu {
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+	/* Responsive Styles */
+	@media screen and (max-width: 760px){
+		#nav-bar ul {
+			position: static;
+			display: none;
+		}
+		#nav-bar li {
+			margin-bottom: 1px;
+		}
+		#nav-bar ul li, #nav-bar li a {
+			width: 100%;
+		}
+		.show-menu {
+			display: block;
+		}
+	}
+
